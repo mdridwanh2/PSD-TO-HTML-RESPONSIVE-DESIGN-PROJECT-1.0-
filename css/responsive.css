@@ -1,0 +1,74 @@
+@media (max-width:990px){
+    
+    #nav-bar{
+        padding: 8px 0;
+    }
+    .nav-links{
+        position: absolute;
+        left: -100%;
+        top: 100%;
+        background-color: #026172;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        border-top: 3px solid #ff2b4a;
+        height: 100vh;
+        
+    }
+    .nav-links li a{
+        width: 100%;
+        padding: 12px;
+        border-bottom: 1px dotted #fff;
+    }
+    .container{
+        padding: 0 10px;
+    }
+    
+    .drop-menu-01{
+        position: relative;
+        top: 0;
+        width: 100%;
+        background-color: rgb(1, 48, 54);
+    }
+    .drop-menu-01 li{
+        width: 100%;
+        border: none;
+    }
+    
+
+    .drop-menu-02{
+        position: relative;
+        left: 0;
+        width: 100%;
+        background-color: rgb(1, 48, 54);
+    }
+    
+    .humbarger{
+        display: block;
+    }
+    .nav-links.active{
+        left: 0;
+    }
+}
+@media (max-width:600px){
+    .hero-cnt h1{
+        font-size: 50px;
+    }
+    .hero-cnt p{
+        font-size: 15px;
+    }
+}
+
+@media (max-width:400px){
+    .search button{
+        padding: 10px ;
+        font-size: 10px;
+        margin-top: 2px;
+    }
+    .hero-cnt h1{
+        font-size: 40px;
+    }
+    .hero-cnt p{
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,249 @@
+/* ============================== GOOGLE FONT HERE ============================== */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700;800&display=swap');
+
+/* ============================== HELP CSS ============================== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    color: #000;
+    transition: all 0.3s ease-in;
+    scroll-behavior: smooth;
+}
+a{
+    text-transform: capitalize;
+}
+.container{
+    margin: auto;
+    max-width:1170px ;
+    
+}
+:root{
+    --nav-bg-color: #026172;
+    --nav-text-color: #f5eeee;
+    --light-text-color: #949eae;
+
+    --hovar-bg-color: #1df800;
+    --hovar-text-color: #fffefe;
+}
+
+/* ============================== HEADER AND NAV HERE ============================== */
+#nav-bar{
+    width: 100%;
+    background-color: var(--nav-bg-color);
+    z-index: 1000;
+    position: fixed;
+}
+
+.logo a{
+    font-size: 35px;
+    font-weight: 700;
+    color: var(--nav-text-color);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav ul{
+    display: flex;
+}
+nav ul li{
+   position: relative;
+}
+
+nav ul li a{
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 15px;
+    transition: all 0.3s ease-in;
+    color: var(--nav-text-color);
+    white-space: nowrap;
+}
+.active{
+    color: var(--hovar-bg-color);
+}
+nav ul li a:hover{
+    color: var(--hovar-bg-color);
+}
+
+
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form{
+    position: relative;
+}
+.search input{
+    border: none;
+    outline: none;
+    padding: 10px 12px;
+    border-radius: 50px;
+    width: 180px;
+    height: 35px;
+}
+.search input:focus{
+    outline: none;
+}
+.bx-search{
+    position: absolute;
+    right: 0;
+    top: 12px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    margin-left: 10px;
+    color: var(--light-text-color);
+    cursor: pointer;
+}
+.search button{
+    border: none;
+    outline: none;
+    margin: 0 10px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: transparent;
+    color: var(--nav-text-color);
+    text-transform: uppercase;
+    border: 1px solid var(--light-text-color);
+    cursor: pointer;
+    font-weight: 600;
+}
+.search button:hover{
+    background-color: #ff2b4a;
+    border: none;
+    color: white;
+}
+
+
+
+/* ============================== BG-COVER ============================== */
+#cover{
+    max-width: 100%;
+    height: 110vh;
+    background-image: url(../image/bg-cover.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    background-color: #000000ad;
+    background-blend-mode: multiply ;
+    display: grid;
+    grid-template-columns: (repeat());
+}
+
+.hero-cnt{
+    max-width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.hero-cnt h1{
+    display:block;
+    /* font-size: clamp(32px, 6vw, 65px); */
+    text-transform: uppercase;
+    color: white;
+    font-size: 80px;
+
+}
+.hero-cnt p{
+    color: white;
+    font-size: 20px;
+    /* font-size: clamp(15px, 1vw, 20px); */
+}
+
+
+
+
+/* ============================== drop-menu-01============================== */
+.drop-menu-01{
+    display: none;
+    position: absolute;
+    background-color: var(--nav-bg-color);
+    left: 0;
+    top: 100%;
+    border-top: 3px solid #ff2b4a;
+    width: 200px;
+}
+.drop-menu-01 li{
+    width: 100%;
+    border-bottom: 1px dotted #fff;
+}
+.drop-menu-01 li:last-child{
+    border: none;
+}
+
+nav ul li:hover .drop-menu-01,
+.drop-menu-01 li:hover .drop-menu-02{
+    display: block;
+}
+
+
+/* ============================== drop-menu-02 ============================== */
+.drop-menu-02{
+    background-color: var(--nav-bg-color);
+    position: absolute;
+    display: none;
+    left: 100%;
+    top: 0;
+    width: 200px;
+    border-top: 3px solid #ff2b4a;
+}
+
+.down-right-icon{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul li a:hover .bx-chevron-right,
+nav ul li a:hover .bxs-chevron-down{
+    color: var(--hovar-bg-color);
+}
+
+.bx-chevron-right,
+.bxs-chevron-down{
+    color: var(--hovar-text-color);
+}
+
+
+/* ============================== humbarger ============================== */
+.humbarger{
+    display: none;
+    cursor: pointer;
+    transition: all 0.50s ease-in-out;
+}
+.humbarger span{
+    background-color: var(--nav-text-color);
+    display: block;
+    width: 29px;
+    height: 2px;
+    margin: 7px auto;
+}
+
+.humbarger.active span:nth-child(1){
+    transform: translateY(5px) rotate(45deg);
+}
+.humbarger.active span:nth-child(3){
+    transform: translateY(-4px) rotate(-45deg);
+}
+.humbarger.active span:nth-child(2){
+    display: none;
+}
+
+
+/* .scrolled{
+    background-color: rgb(255, 250, 250);
+    
+}
+.scrolled .logo a{
+    color: black;
+} */
